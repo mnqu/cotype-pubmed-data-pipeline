@@ -1,12 +1,15 @@
 #!/bin/sh
 
+# data path
+data_path=/shared/data/mengqu2/umls/cotype/
+
 # input file
-name2cui_umls="/shared/data/mengqu2/umls/cotype/name2cui_umls.txt"
-name2cui_go="/shared/data/mengqu2/umls/cotype/name2cui_go.txt"
-cui2type_umls="/shared/data/mengqu2/umls/cotype/cui2type_umls.txt"
-cui2type_go="/shared/data/mengqu2/umls/cotype/cui2type_go.txt"
-pair2relation="/shared/data/mengqu2/umls/cotype/pair2relation.txt"
-text_file="/shared/data/mengqu2/umls/cotype/pubmed.token"
+name2cui_umls=${data_path}name2cui_umls.txt
+name2cui_go=${data_path}name2cui_go.txt
+cui2type_umls=${data_path}cui2type_umls.txt
+cui2type_go=${data_path}cui2type_go.txt
+pair2relation=${data_path}pair2relation.txt
+text_file=${data_path}pubmed.token
 
 # output file
 output_json_file="data_pubmed.json"
