@@ -130,7 +130,7 @@ for sent in sentences:
 
 	valid_ent_list = []
 	for ent in ent_list:
-		name = get_name(ent[0], ent[1])
+		name = get_name(sent, ent[0], ent[1])
 		if name2flag.get(name, 0) != 0:
 			cui = name2cui[name]
 			types = cui2type.get(cui, {}).keys()
@@ -142,8 +142,8 @@ for sent in sentences:
 
 	relation_list = []
 
-	for u in range(len(ent_lst)):
-		for v in range(len(ent_lst)):
+	for u in range(len(valid_ent_list)):
+		for v in range(len(valid_ent_list)):
 			if u == v:
 				continue
 			entu = valid_ent_list[u]
@@ -167,7 +167,7 @@ for sent in sentences:
 		continue
 
 	dic = {}
-	dic["sentText"] = get_name(0, len(sent))
+	dic["sentText"] = get_name(sent, 0, len(sent))
 	dic["articleId"] = sent_id
 	dic["sentId"] = sent_id
 	dic["entityMentions"] = []
