@@ -1,17 +1,17 @@
 #!/bin/sh
 
 # data path
-data_path=/shared/data/mengqu2/umls/cotype/
+umls_path=/shared/data/mengqu2/umls/cotype/
 
 # NER path
 ner_model=${data_path}stanford-ner/ner_calbc.sh
 
 # input file
-name2cui_umls=${data_path}name2cui_umls.txt
-name2cui_go=${data_path}name2cui_go.txt
-cui2type_umls=${data_path}cui2type_umls.txt
-cui2type_go=${data_path}cui2type_go.txt
-pair2relation=${data_path}pair2relation.txt
+name2cui_umls=${umls_path}name2cui_umls.txt
+name2cui_go=${umls_path}name2cui_go.txt
+cui2type_umls=${umls_path}cui2type_umls.txt
+cui2type_go=${umls_path}cui2type_go.txt
+pair2relation=${umls_path}pair2relation.txt
 
 text_file="text.txt"
 
