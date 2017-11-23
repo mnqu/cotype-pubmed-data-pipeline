@@ -12,8 +12,8 @@ pair2relation=${umls_path}pair2relation.txt
 text_file=${umls_path}pubmed.token
 
 # output file
-output_json_file="data_pubmed.json"
-output_instance_file="instance_pubmed.txt"
+output_json_file=data_pubmed.json
+output_instance_file=instance_pubmed.txt
 
 python distant_supervision.py ${name2cui_umls} ${name2cui_go} ${pair2relation} ${text_file} temp.json stopwords.txt ${output_instance_file}
 python map_type.py ${cui2type_umls} ${cui2type_go} temp.json ${output_json_file}

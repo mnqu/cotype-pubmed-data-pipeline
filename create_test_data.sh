@@ -13,10 +13,10 @@ cui2type_umls=${umls_path}cui2type_umls.txt
 cui2type_go=${umls_path}cui2type_go.txt
 pair2relation=${umls_path}pair2relation.txt
 
-text_file="text.txt"
+text_file=text.txt
 
 # output file
-output_json_file="data_pubmed.json"
+output_json_file=data_pubmed.json
 
 ${ner_model} ${text_file} text_ner.txt
 python process.py text_ner.txt ${name2cui_umls} ${name2cui_go} ${cui2type_umls} ${cui2type_go} ${pair2relation} ${output_json_file}
